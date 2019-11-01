@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+
+    <title>Criar carta</title>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-ful bg-dark">
+        <a class="navbar-brand" href="#">Sonic Card Game</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Criar carta<span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="SelecionarCartas.html">Selecionar cartas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="card.html">Ver Carta</a>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+</head>
+
+<body>
+
+
+    <div class="card bg-light">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center">Criando uma carta </h4>
+            <p class="text-center">Cadastre sua carta:</p>
+
+            <form action="AdicionarCartaJSP.jsp" method="post">
+                <!-- action deve ter o mesmo nome do arq JSP -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-signature"></i> </span>
+                    </div>
+                    <input name="NomeCarta" class="form-control" placeholder="Nome da Carta" type="text">
+                </div>
+                <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-gem"></i> </span>
+                    </div>
+                    <input name="Mana" class="form-control" placeholder="Mana" type="number">
+                </div>
+                <!-- form-group// -->
+
+                <div class="form-group input-group">
+                    <span class="input-group-text"> <i class="fa fa-ring"></i> </span>
+                    <input name="Imagem" class="form-control" placeholder="Imagem URL" type="url">
+                </div>
+                <!-- form-group// -->
+                <div class="form-group">
+                    <label for="TipoDaCarta">Escolha o tipo da sua carta:</label>
+                    <select multiple class="form-control" id="TipoDaCarta" name="TipoDaCarta">
+                        <option>Animal Antropomórfico</option>
+                        <option>Ser Humano</option>
+                        <option>Robô</option>
+                        <option>Armadilhas</option>
+                        <option>Equipamento</option>
+                    </select>
+                </div>
+                <!-- form-group// -->
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-hand-rock"></i> </span>
+                    </div>
+                    <input name="Ataque" class="form-control" placeholder="Ataque" type="number">
+                </div>
+                <!-- form-group// -->
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-shield-alt"></i> </span>
+                    </div>
+                    <input name="Defesa" class="form-control" placeholder="Defesa" type="number">
+                </div>
+                <!-- form-group// -->
+
+
+                <div class="form-group">
+                    <label for="cartaDescricao">Descrição da Sua Carta</label>
+                    <textarea class="form-control" id="cartaDescricao" rows="4" name="cartaDescricao"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block btn-dark"> Entrar </button>
+                </div>
+                <!-- form-group// -->
+
+
+
+
+
+
+            </form>
+        </article>
+    </div>
+    <!-- card.// -->
+</body>

@@ -33,7 +33,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Criar carta<span class="sr-only">(current)</span></a>
                     <li class="nav-item">
-                        <a class="nav-link" href="SelecionarCartas.html">Selecionar cartas</a>
+                        <a class="nav-link" href="SelecionarCarta">Selecionar cartas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="card.html">Ver Carta</a>
@@ -73,6 +73,11 @@
                     <input name="Imagem" class="form-control" placeholder="Imagem URL" type="url">
                 </div>
                 <!-- form-group// -->
+                <div class="form-group input-group">
+                    <span class="input-group-text"> <i class="fa fa-ring"></i> </span>
+                    <input name="IconIMG" class="form-control" placeholder="Icon URL" type="url">
+                </div>
+                <!-- form-group// -->
                 <div class="form-group">
                     <label for="TipoDaCarta">Escolha o tipo da sua carta:</label>
                     <select multiple class="form-control" id="TipoDaCarta" name="TipoDaCarta">
@@ -105,6 +110,13 @@
                 <div class="form-group">
                     <label for="cartaDescricao">Descrição da Sua Carta</label>
                     <textarea class="form-control" id="cartaDescricao" rows="4" name="cartaDescricao"></textarea>
+                </div>
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-signature"></i> </span>
+                    </div>
+                    <input name="FalaFavorita" class="form-control" placeholder="Fala favorita" type="text">
                 </div>
 
                 <div class="form-group">

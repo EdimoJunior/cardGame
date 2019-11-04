@@ -12,12 +12,12 @@
   
   <servlet>
   	<servlet-name>oiServlet</servlet-name>
-  	<servlet-class>br.servlet.OiMundo</servlet-class>
+  	<servlet-class>br.servlet.Index</servlet-class>
   </servlet>
   
   <servlet-mapping>
   	<servlet-name>oiServlet</servlet-name>
-  	<url-pattern>/oiMundo</url-pattern>
+  	<url-pattern>/Index</url-pattern>
   </servlet-mapping>
   
 </web-app>

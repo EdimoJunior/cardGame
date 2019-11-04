@@ -1,7 +1,7 @@
 package classes;
 
 public class Carta {
-	String nomeCarta, imagem, tipoDaCarta, cartaDescricao;
+	String nomeCarta, imagem, tipoDaCarta, cartaDescricao, iconIMG, falaFavorita;
 	int mana, ataque, defesa;
 	
 	public String getNomeCarta() {
@@ -16,6 +16,13 @@ public class Carta {
 	}
 	public void setImagem(String imagem) {
 		this.imagem = imagem;
+	}
+	
+	public String getIconIMG() {
+		return iconIMG;
+	}
+	public void setIconIMG(String iconIMG) {
+		this.iconIMG = iconIMG;
 	}
 	
 	public String getTipoDaCarta() {
@@ -53,5 +60,28 @@ public class Carta {
 		this.defesa = defesa;
 	}
 	
+	public String getFalaFavorita() {
+		return falaFavorita;
+	}
+	public void setFalaFavorita(String falaFavorita) {
+		this.falaFavorita = falaFavorita;
+	}
 	
+	public Carta(String nomeCarta, String imagem, String tipoDaCarta, String cartaDescricao, String iconIMG,
+			String falaFavorita, int mana, int ataque, int defesa) {
+		super();
+		this.nomeCarta = nomeCarta;
+		this.imagem = imagem;
+		this.tipoDaCarta = tipoDaCarta;
+		this.cartaDescricao = cartaDescricao;
+		this.iconIMG = iconIMG;
+		this.falaFavorita = falaFavorita;
+		this.mana = mana;
+		this.ataque = ataque;
+		this.defesa = defesa;
+	}
+	
+	public Carta() {
+		super();
+	}
 }

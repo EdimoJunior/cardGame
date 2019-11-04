@@ -16,7 +16,7 @@ public class CartaDAO {
 	}
 	
 	public void adicionar(Carta carta) {
-		String sql = "insert into carta (nomeCarta, mana, imagem, tipoDaCarta, ataque, defesa, cartaDescricao) values (?,?,?,?,?,?,?)";
+		String sql = "insert into carta (nomeCarta, mana, imagem, iconIMG, tipoDaCarta, ataque, defesa, cartaDescricao, falaFavorita) values (?,?,?,?,?,?,?,?,?)";
 		
 		try {
 			PreparedStatement ps = conexao.prepareStatement(sql);
@@ -24,10 +24,12 @@ public class CartaDAO {
 			ps.setString(1, carta.getNomeCarta());
 			ps.setInt(2, carta.getMana());
 			ps.setString(3, carta.getImagem());
-			ps.setString(4, carta.getTipoDaCarta());
-			ps.setInt(5, carta.getAtaque());
-			ps.setInt(6, carta.getDefesa());
-			ps.setString(7, carta.getCartaDescricao());
+			ps.setString(4, carta.getIconIMG());
+			ps.setString(5, carta.getTipoDaCarta());
+			ps.setInt(6, carta.getAtaque());
+			ps.setInt(7, carta.getDefesa());
+			ps.setString(8, carta.getCartaDescricao());
+			ps.setString(9, carta.getFalaFavorita());
 			
 			ps.execute();
 			ps.close();
@@ -39,7 +41,7 @@ public class CartaDAO {
 	}
 	
 	public void alterar(String nome) {
-		String sql = "UPDATE carta SET nomeCarta = ?, mana = ?, imagem = ?, tipoDaCarta = ?, ataque = ?, defesa = ?, cartaDescricao = ? WHERE nomeCarta = "+nome;
+		String sql = "UPDATE carta SET nomeCarta = ?, mana = ?, imagem = ?, iconIMG = ?,tipoDaCarta = ?, ataque = ?, defesa = ?, cartaDescricao = ?, falaFavorita = ? WHERE nomeCarta = "+nome;
 		
 		Carta carta = new Carta();
 		
@@ -49,10 +51,12 @@ public class CartaDAO {
 			ps.setString(1, carta.getNomeCarta());
 			ps.setInt(2, carta.getMana());
 			ps.setString(3, carta.getImagem());
-			ps.setString(4, carta.getTipoDaCarta());
-			ps.setInt(5, carta.getAtaque());
-			ps.setInt(6, carta.getDefesa());
-			ps.setString(7, carta.getCartaDescricao());
+			ps.setString(4, carta.getIconIMG());
+			ps.setString(5, carta.getTipoDaCarta());
+			ps.setInt(6, carta.getAtaque());
+			ps.setInt(7, carta.getDefesa());
+			ps.setString(8, carta.getCartaDescricao());
+			ps.setString(9, carta.getFalaFavorita());
 			
 			ps.execute();
 			ps.close();

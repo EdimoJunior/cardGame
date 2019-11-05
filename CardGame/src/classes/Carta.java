@@ -2,8 +2,30 @@ package classes;
 
 public class Carta {
 	String nomeCarta, imagem, tipoDaCarta, cartaDescricao, iconIMG, falaFavorita;
-	int mana, ataque, defesa;
+	int mana, ataque, defesa, id;
 	
+	
+	
+	public Carta(String nomeCarta, String imagem, String tipoDaCarta, String cartaDescricao, String iconIMG,
+			String falaFavorita, int mana, int ataque, int defesa, int id) {
+		super();
+		this.nomeCarta = nomeCarta;
+		this.imagem = imagem;
+		this.tipoDaCarta = tipoDaCarta;
+		this.cartaDescricao = cartaDescricao;
+		this.iconIMG = iconIMG;
+		this.falaFavorita = falaFavorita;
+		this.mana = mana;
+		this.ataque = ataque;
+		this.defesa = defesa;
+		this.id = id;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getNomeCarta() {
 		return nomeCarta;
 	}

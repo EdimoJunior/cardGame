@@ -142,8 +142,12 @@ public class SelecionarCarta extends HttpServlet {
 				pw.println("<td>"+cartas.get(i).getDefesa()+"</td>"); 
 				pw.println("<td>"+cartas.get(i).getCartaDescricao()+"</td>");
 				pw.println("<td>"+cartas.get(i).getFalaFavorita()+"</td>"); 
-				pw.println("<td><a href = 'alterarCarta.html'<i class='far fa-edit'></i></a></td>");
-				pw.println("<td><a href = 'excluirCarta.html'<i class='far fa-trash-alt'></i></td>");
+				pw.println("<td><a href = 'AlterarCartaJSP.jsp?id="+cartas.get(i).getId()+"&nomeCarta="+cartas.get(i).getNomeCarta()+"&mana="+cartas.get(i).getMana()+
+						"&imagem="+cartas.get(i).getImagem()+"&iconIMG="+cartas.get(i).getIconIMG()+"&tipoDaCarta="+cartas.get(i).getTipoDaCarta()+
+						"&ataque="+cartas.get(i).getAtaque()+"&defesa="+cartas.get(i).getDefesa()+"&cartaDescricao="+cartas.get(i).getCartaDescricao()+
+						"&falaFavorita="+cartas.get(i).getFalaFavorita()+
+						"'<i class='far fa-edit'></i></a></td>");
+				pw.println("<td><a href = 'ExcluirCartaJSP.jsp?id="+cartas.get(i).getId()+"'<i class='far fa-trash-alt'></i></td>");
 				pw.println("<td><a href = 'card.html'<i class=\"fas fa-eye\"></i></td>");
 				pw.println("</tr>");
 	        }

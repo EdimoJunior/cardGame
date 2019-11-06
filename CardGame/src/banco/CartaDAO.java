@@ -40,10 +40,9 @@ public class CartaDAO {
 		}
 	}
 	
-	public void alterar(String nome) {
-		String sql = "UPDATE carta SET nomeCarta = ?, mana = ?, imagem = ?, iconIMG = ?,tipoDaCarta = ?, ataque = ?, defesa = ?, cartaDescricao = ?, falaFavorita = ? WHERE nomeCarta = "+nome;
+	public void alterar(Carta carta) {
+		String sql = "UPDATE carta SET nomeCarta = ?, mana = ?, imagem = ?, iconIMG = ?,tipoDaCarta = ?, ataque = ?, defesa = ?, cartaDescricao = ?, falaFavorita = ? WHERE id = "+carta.getId();
 		
-		Carta carta = new Carta();
 		
 		try {
 			PreparedStatement ps = conexao.prepareStatement(sql);
@@ -67,11 +66,19 @@ public class CartaDAO {
 		}
 	}
 	
-	public void selecionar() {
-		
-	}
 	
-	public void deletar() {
+	public void deletar(int id) {
+		String sql = "DELETE FROM carta WHERE id = "+id;
 		
+		try {
+			PreparedStatement ps = conexao.prepareStatement(sql);
+			
+			ps.execute();
+			ps.close();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("ERRO ao tentar deletar!");
+		}
 	}
 }

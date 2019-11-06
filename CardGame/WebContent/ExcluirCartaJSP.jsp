@@ -14,27 +14,13 @@
 </head>
 <body>
 	<%
-		String nomeCarta = request.getParameter("NomeCarta"); //nome do input.
-		int mana = Integer.parseInt(request.getParameter("Mana"));
-		String imagem = request.getParameter("Imagem");
-		String tipoDaCarta = request.getParameter("TipoDaCarta");
-		int ataque = Integer.parseInt(request.getParameter("Ataque"));
-		int defesa = Integer.parseInt(request.getParameter("Defesa"));
-		String cartaDescricao = request.getParameter("cartaDescricao");
+		int id = Integer.parseInt(request.getParameter("id"));
+
+		CartaDAO excluirCarta = new CartaDAO();
+
+		excluirCarta.deletar(id);
 		
-		Carta carta1 = new Carta();
-		CartaDAO cadastroCarta = new CartaDAO();
-		
-		carta1.setNomeCarta(nomeCarta);
-		carta1.setMana(mana);
-		carta1.setImagem(imagem);
-		carta1.setTipoDaCarta(tipoDaCarta);
-		carta1.setAtaque(ataque);
-		carta1.setDefesa(defesa);
-		carta1.setCartaDescricao(cartaDescricao);
-		
-		cadastroCarta.adicionar(carta1);
-		out.println("Deletado no objeto/Scriptlet");
+		out.println("Objeto deletado!");
 	%>
 </body>
 </html>
